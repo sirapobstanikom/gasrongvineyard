@@ -28,9 +28,20 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
-    if (isOpen) document.body.style.overflow = 'hidden';
-    else document.body.style.overflow = '';
-    return () => { document.body.style.overflow = ''; };
+    if (isOpen) {
+      const scrollY = window.scrollY;
+      document.body.classList.add('menu-open-mobile');
+      document.body.style.top = `-${scrollY}px`;
+    } else {
+      const scrollY = document.body.style.top ? Math.abs(parseInt(document.body.style.top, 10)) : 0;
+      document.body.classList.remove('menu-open-mobile');
+      document.body.style.top = '';
+      if (scrollY) window.scrollTo(0, scrollY);
+    }
+    return () => {
+      document.body.classList.remove('menu-open-mobile');
+      document.body.style.top = '';
+    };
   }, [isOpen]);
 
   return (
@@ -74,25 +85,36 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* Mobile Toggle */}
+        {/* Mobile Toggle — พื้นที่แตะอย่างน้อย 44px */}
         <button
-          className={`md:hidden p-2 transition-colors ${scrolled ? 'text-ink-dark' : 'text-white'}`}
+          type="button"
+          aria-label={isOpen ? 'ปิดเมนู' : 'เปิดเมนู'}
+          className={`md:hidden min-w-[44px] min-h-[44px] flex items-center justify-center transition-colors ${scrolled ? 'text-ink-dark' : 'text-white'}`}
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu + Overlay */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-paper-light border-t border-gold-accent/10 overflow-hidden"
-          >
-            <div className="flex flex-col p-4 pb-[max(1rem,env(safe-area-inset-bottom))] gap-3 max-h-[calc(100dvh-4rem)] overflow-y-auto">
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 bg-black/40 z-40 md:hidden"
+              onClick={() => setIsOpen(false)}
+              aria-hidden
+            />
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              className="md:hidden bg-paper-light border-t border-gold-accent/10 overflow-hidden relative z-50"
+            >
+            <div className="flex flex-col p-4 pb-[max(1rem,env(safe-area-inset-bottom))] gap-3 max-h-[calc(100dvh-5rem)] overflow-y-auto overscroll-contain">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
@@ -104,7 +126,8 @@ export default function Navbar() {
                 </a>
               ))}
             </div>
-          </motion.div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </nav>

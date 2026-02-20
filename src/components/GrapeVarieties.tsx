@@ -31,7 +31,7 @@ export default function GrapeVarieties() {
   return (
     <section id="varieties" className="py-16 sm:py-24 md:py-32 px-4 sm:px-6 bg-white">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-12 sm:mb-20 gap-6 sm:gap-8">
+        <div className="flex flex-col md:flex-row justify-center md:justify-between items-center md:items-end mb-12 sm:mb-20 gap-6 sm:gap-8 text-center md:text-left">
           <div className="max-w-2xl">
             <span className="text-gold-accent tracking-[0.3em] uppercase text-[10px] font-bold mb-4 block">
               The Collection
@@ -41,7 +41,7 @@ export default function GrapeVarieties() {
               <span className="italic font-extralight text-gold-accent">ระดับพรีเมียม</span>
             </h2>
           </div>
-          <p className="text-ink-dark/50 font-light max-w-xs text-sm leading-relaxed">
+          <p className="text-ink-dark/50 font-light max-w-xs text-sm leading-relaxed md:max-w-[14rem]">
             เราคัดสรรเฉพาะสายพันธุ์ที่โดดเด่นที่สุด เพื่อมอบประสบการณ์รสชาติที่เหนือระดับในทุกพวง
           </p>
         </div>

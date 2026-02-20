@@ -12,7 +12,7 @@ export default function FloatingContact() {
       animate={{ scale: 1, opacity: 1 }}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
-      className="fixed bottom-8 right-8 z-50 w-16 h-16 bg-[#1877F2] text-white rounded-full flex items-center justify-center shadow-2xl cursor-pointer"
+      className="fixed z-50 w-14 h-14 sm:w-16 sm:h-16 bg-[#1877F2] text-white rounded-full flex items-center justify-center shadow-2xl cursor-pointer bottom-[max(1rem,env(safe-area-inset-bottom))] right-[max(1rem,env(safe-area-inset-right))] active:scale-95"
     >
       <Facebook size={32} />
       <span className="absolute right-full mr-4 bg-white text-[#1877F2] px-4 py-2 rounded-xl text-sm font-bold shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap hidden md:block">
