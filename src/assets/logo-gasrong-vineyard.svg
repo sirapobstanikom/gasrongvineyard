@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 400" width="320" height="400">
+  <defs>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f5f0e8"/>
+      <stop offset="100%" style="stop-color:#e8dfd0"/>
+    </linearGradient>
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d5a27"/>
+      <stop offset="100%" style="stop-color:#1e3d1a"/>
+    </linearGradient>
+  </defs>
+  <path d="M160 20 Q260 20 280 80 Q300 140 280 200 Q260 260 200 360 Q160 390 120 360 Q60 260 40 200 Q20 140 40 80 Q60 20 160 20 Z" fill="none" stroke="#5c4033" stroke-width="8"/>
+  <path d="M160 28 Q248 28 264 82 Q278 132 262 192 Q246 252 192 348 Q160 378 128 348 Q74 252 58 192 Q42 132 56 82 Q72 28 160 28 Z" fill="url(#shieldGrad)" stroke="#c4a574" stroke-width="2"/>
+  <g transform="translate(160, 75)">
+    <path d="M-45 -5 Q-55 15 -50 35 Q-40 50 -25 40 Q-15 25 -25 5 Q-35 -10 -45 -5 Z" fill="url(#leafGrad)" stroke="#1e3d1a" stroke-width="1"/>
+    <path d="M45 -5 Q55 15 50 35 Q40 50 25 40 Q15 25 25 5 Q35 -10 45 -5 Z" fill="url(#leafGrad)" stroke="#1e3d1a" stroke-width="1"/>
+    <path d="M0 40 L0 55" stroke="#5c4033" stroke-width="3" fill="none"/>
+    <circle cx="-18" cy="25" r="10" fill="#e8e4dc" stroke="#8a8580" stroke-width="1.5"/>
+    <circle cx="0" cy="20" r="12" fill="#e8e4dc" stroke="#8a8580" stroke-width="1.5"/>
+    <circle cx="18" cy="25" r="10" fill="#e8e4dc" stroke="#8a8580" stroke-width="1.5"/>
+    <circle cx="-8" cy="38" r="9" fill="#e8e4dc" stroke="#8a8580" stroke-width="1.5"/>
+    <circle cx="10" cy="38" r="9" fill="#e8e4dc" stroke="#8a8580" stroke-width="1.5"/>
+    <circle cx="0" cy="48" r="8" fill="#e8e4dc" stroke="#8a8580" stroke-width="1.5"/>
+  </g>
+  <path d="M72 125 L268 125 L258 175 L82 175 Z" fill="#2d5a27"/>
+  <text x="160" y="158" text-anchor="middle" fill="white" font-family="Sarabun, Tahoma, sans-serif" font-size="28" font-weight="600">A*0#-</text>
+  <text x="160" y="218" text-anchor="middle" fill="white" font-family="Sarabun, Tahoma, sans-serif" font-size="22" font-weight="500">*'-8H</text>
+  <line x1="100" y1="225" x2="100" y2="205" stroke="#5c4033" stroke-width="3"/>
+  <line x1="220" y1="225" x2="220" y2="205" stroke="#5c4033" stroke-width="3"/>
+  <text x="160" y="258" text-anchor="middle" fill="#5c4033" font-family="Sarabun, Tahoma, sans-serif" font-size="14">22 *4+L8#5</text>
+  <line x1="140" y1="268" x2="180" y2="268" stroke="#5c4033" stroke-width="1"/>
+</svg>
