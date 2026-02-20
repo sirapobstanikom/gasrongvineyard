@@ -4,23 +4,28 @@ import { motion } from 'motion/react';
 // ภาพจากโปรเจกต์ (โหลดจาก src/assets) — ตอนนี้ใช้ 1.jpg ครบ 6 ช่อง
 // ถ้ามีรูปใน assets/gallery/ (1.jpg, 2.jpg, ...) แล้ว เปลี่ยนเป็น: [1,2,3,4,5,6].map(i => getImage(`../assets/gallery/${i}.jpg`))
 const getImage = (path: string) => new URL(path, import.meta.url).href;
-const one = getImage('../assets/1.jpg');
+const one = getImage('../assets/rev.jpg');
 const two = getImage('../assets/2.jpg');
 const three = getImage('../assets/3.jpg');
 const four = getImage('../assets/4.jpg');
 const five = getImage('../assets/5.jpg');
 const six = getImage('../assets/6.jpg');
-const images = [one, two, three, four, five, six];
+const seven = getImage('../assets/grape.jpg');
+const eight = getImage('../assets/องุ่นเขียว.jpg');
+const nine = getImage('../assets/องุ่นเขียว2.jpg');
+const ten = getImage('../assets/องุ่นแดง2.jpg');
+
+const images = [one, two, three, four, five, six, seven, eight, nine, ten];
 
 export default function Gallery() {
   return (
-    <section id="gallery" className="py-24 px-6 bg-warm-cream">
+    <section id="gallery" className="py-16 sm:py-24 px-4 sm:px-6 bg-warm-cream">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-vineyard-green mb-4">
+        <div className="text-center mb-10 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-vineyard-green mb-4">
             แกลเลอรีภาพสวน
           </h2>
-          <p className="text-lg text-vineyard-green/60 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-vineyard-green/60 max-w-2xl mx-auto px-2">
             บรรยากาศความสุขและความสวยงามในสวนองุ่นแก๊สกับรอง
           </p>
         </div>

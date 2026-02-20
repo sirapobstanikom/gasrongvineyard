@@ -1,11 +1,13 @@
 import React from 'react';
 import { motion } from 'motion/react';
 
+const aboutImage = new URL('../assets/รีวิว.jpg', import.meta.url).href;
+
 export default function About() {
   return (
-    <section id="about" className="py-32 px-6 bg-paper-light overflow-hidden">
+    <section id="about" className="py-16 sm:py-24 md:py-32 px-4 sm:px-6 bg-paper-light overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 sm:gap-16 items-center">
           
           {/* Image Side with Artistic Mask */}
           <motion.div
@@ -15,12 +17,11 @@ export default function About() {
             transition={{ duration: 1, ease: "circOut" }}
             className="lg:col-span-5 relative"
           >
-            <div className="relative z-10 aspect-[4/5] rounded-t-full overflow-hidden shadow-2xl border-[12px] border-white">
+            <div className="relative z-10 aspect-[4/5] rounded-t-full overflow-hidden shadow-2xl border-8 sm:border-[12px] border-white">
               <img
-                src="https://images.unsplash.com/photo-1539667468225-eebb663053e6?q=80&w=1000&auto=format&fit=crop"
-                alt="Vineyard Atmosphere"
+                src={aboutImage}
+                alt="บรรยากาศสวนองุ่นแก๊สกับรอง"
                 className="w-full h-full object-cover"
-                referrerPolicy="no-referrer"
               />
             </div>
             {/* Decorative Element */}
@@ -43,16 +44,16 @@ export default function About() {
               </span>
             </div>
             
-            <h2 className="text-5xl md:text-7xl font-serif text-ink-dark mb-10 leading-[1.1]">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-serif text-ink-dark mb-6 sm:mb-10 leading-[1.1]">
               ความละเมียดละไม<br />
               <span className="italic font-extralight text-gold-accent">แห่งบ้านสวนปากบาง</span>
             </h2>
 
-            <div className="space-y-8 text-lg text-ink-dark/70 leading-relaxed font-light">
+            <div className="space-y-6 sm:space-y-8 text-base sm:text-lg text-ink-dark/70 leading-relaxed font-light">
               <p>
                 สวนองุ่นแก๊สกับรอง คือผลผลิตจากความหลงใหลในศาสตร์แห่งการเพาะปลูก 
                 เราคัดสรรผืนดินที่อุดมสมบูรณ์ที่สุดในอำเภอพรหมบุรี จังหวัดสิงห์บุรี 
-                เพื่อรังสรรค์อาณาจักรแห่งองุ่นที่เปี่ยมไปด้วยคุณภาพและความสุนทรีย์
+                เพื่อรังสรรค์อาณาจักรแห่งองุ่นที่เปี่ยมไปด้วยคุณภาพและความสุนทรีย์ 
               </p>
               <p>
                 ทุกขั้นตอนถูกดูแลด้วยมาตรฐานระดับพรีเมียม ตั้งแต่การคัดสายพันธุ์ระดับโลก 
@@ -61,7 +62,7 @@ export default function About() {
               </p>
             </div>
 
-            <div className="mt-16 grid grid-cols-2 gap-12 border-t border-gold-accent/20 pt-12">
+            <div className="mt-10 sm:mt-16 grid grid-cols-2 gap-8 sm:gap-12 border-t border-gold-accent/20 pt-8 sm:pt-12">
               <div>
                 <p className="text-3xl font-serif text-gold-accent mb-2">100%</p>
                 <p className="text-[10px] uppercase tracking-widest font-bold text-ink-dark/40">Organic Process</p>

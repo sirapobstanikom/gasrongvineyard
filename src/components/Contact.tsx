@@ -4,9 +4,9 @@ import { Phone, Facebook, MapPin, Send } from 'lucide-react';
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-32 px-6 bg-white">
+    <section id="contact" className="py-16 sm:py-24 md:py-32 px-4 sm:px-6 bg-white">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 lg:gap-24">
           {/* Contact Info & Map */}
           <div>
             <div className="flex items-center gap-4 mb-8">
@@ -15,12 +15,12 @@ export default function Contact() {
                 Get In Touch
               </span>
             </div>
-            <h2 className="text-5xl md:text-7xl font-serif text-ink-dark mb-12 leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-serif text-ink-dark mb-8 sm:mb-12 leading-tight">
               ติดต่อเรา
             </h2>
-            <div className="space-y-10 mb-16">
-              <div className="flex items-start gap-6">
-                <div className="w-14 h-14 bg-paper-light rounded-full flex items-center justify-center text-gold-accent shrink-0 border border-gold-accent/10">
+            <div className="space-y-6 sm:space-y-10 mb-10 sm:mb-16">
+              <div className="flex items-start gap-4 sm:gap-6">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-paper-light rounded-full flex items-center justify-center text-gold-accent shrink-0 border border-gold-accent/10">
                   <MapPin size={24} />
                 </div>
                 <div>
@@ -31,18 +31,18 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="flex items-start gap-6">
-                <div className="w-14 h-14 bg-paper-light rounded-full flex items-center justify-center text-gold-accent shrink-0 border border-gold-accent/10">
+              <div className="flex items-start gap-4 sm:gap-6">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-paper-light rounded-full flex items-center justify-center text-gold-accent shrink-0 border border-gold-accent/10">
                   <Phone size={24} />
                 </div>
                 <div>
                   <h4 className="text-xl font-serif text-ink-dark mb-2">เบอร์โทรศัพท์</h4>
-                  <p className="text-ink-dark/60 font-light">0634265626</p>
+                  <p className="text-ink-dark/60 font-light">063-4265626 ,096-8789251</p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-6">
-                <div className="w-14 h-14 bg-paper-light rounded-full flex items-center justify-center text-gold-accent shrink-0 border border-gold-accent/10">
+              <div className="flex items-start gap-4 sm:gap-6">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-paper-light rounded-full flex items-center justify-center text-gold-accent shrink-0 border border-gold-accent/10">
                   <Facebook size={24} />
                 </div>
                 <div>
@@ -61,16 +61,16 @@ export default function Contact() {
 
             {/* Google Map Embed */}
             <div className="aspect-video rounded-[2rem] overflow-hidden shadow-2xl border border-gold-accent/10 grayscale hover:grayscale-0 transition-all duration-700">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3858.3456789!2d100.456789!3d14.890123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDUzJzI0LjQiTiAxMDDCsDI3JzI0LjQiRQ!5e0!3m2!1sth!2sth!4v1234567890"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
+      <iframe
+    src="https://www.google.com/maps?q=14.8499898,100.4353103&hl=th&z=17&output=embed"
+    width="100%"
+    height="100%"
+    style={{ border: 0 }}
+    allowFullScreen
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+    ></iframe>
+    </div>
           </div>
 
           {/* Contact Form */}

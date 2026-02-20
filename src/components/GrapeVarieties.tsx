@@ -1,9 +1,11 @@
 import React from 'react';
 import { motion } from 'motion/react';
 
+const imageViking = new URL('../assets/ไวกิ้ง.jpg', import.meta.url).href;
+const imageshineMuscat = new URL('../assets/shinemus.jpg', import.meta.url).href;
 const varieties = [
   {
-    name: 'Black Opal',
+    name: 'rembo',
     description: 'องุ่นดำไร้เมล็ด รสชาติหวานจัด เนื้อแน่นกรอบ กลิ่นหอมลึกซึ้งเป็นเอกลักษณ์',
     image: 'https://images.unsplash.com/photo-1601275868399-45bec4f4cd9d?q=80&w=800&auto=format&fit=crop',
     taste: 'หวานเข้ม, กรอบแน่น',
@@ -12,29 +14,29 @@ const varieties = [
   {
     name: 'Shine Muscat',
     description: 'องุ่นเขียวพรีเมียมยอดนิยม ผิวบางกรอบ เนื้อเจลลี่ กลิ่นหอมมัสกัตคล้ายดอกไม้',
-    image: 'https://images.unsplash.com/photo-1625498542602-6bfb30f39b3f?q=80&w=800&auto=format&fit=crop',
+    image: imageshineMuscat,
     taste: 'หวานนุ่ม, หอมมัสกัต',
     origin: 'Exclusive Estate',
   },
   {
-    name: 'Red Globe',
-    description: 'องุ่นแดงผลโต เนื้อแน่นฉ่ำน้ำ รสชาติหวานกลมกล่อม มีความสดชื่นในทุกคำ',
-    image: 'https://images.unsplash.com/photo-1596364749358-9dd258444971?q=80&w=800&auto=format&fit=crop',
-    taste: 'หวานฉ่ำ, สดชื่น',
-    origin: 'Heritage Vine',
+    name: 'Viking',
+    description: 'สายพันธุ์ไวกิ้งจากประเทศ Ukraine รสชาติโดดเด่น เนื้อแน่น กลมกล่อม',
+    image: imageViking,
+    taste: 'หวานกลมกล่อม, เนื้อแน่น',
+    origin: 'Ukraine',
   },
 ];
 
 export default function GrapeVarieties() {
   return (
-    <section id="varieties" className="py-32 px-6 bg-white">
+    <section id="varieties" className="py-16 sm:py-24 md:py-32 px-4 sm:px-6 bg-white">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-12 sm:mb-20 gap-6 sm:gap-8">
           <div className="max-w-2xl">
             <span className="text-gold-accent tracking-[0.3em] uppercase text-[10px] font-bold mb-4 block">
               The Collection
             </span>
-            <h2 className="text-5xl md:text-7xl font-serif text-ink-dark leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-serif text-ink-dark leading-tight">
               สายพันธุ์องุ่น<br />
               <span className="italic font-extralight text-gold-accent">ระดับพรีเมียม</span>
             </h2>
@@ -44,7 +46,7 @@ export default function GrapeVarieties() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12">
           {varieties.map((item, index) => (
             <motion.div
               key={item.name}

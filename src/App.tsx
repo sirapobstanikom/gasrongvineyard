@@ -5,6 +5,8 @@ import About from './components/About';
 import GrapeVarieties from './components/GrapeVarieties';
 import WineProducts from './components/WineProducts';
 import Gallery from './components/Gallery';
+import CafeGallery from './components/CafeGallery';
+import VideoReview from './components/VideoReview';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import FloatingContact from './components/FloatingContact';
@@ -21,7 +23,7 @@ export default function App() {
         <h1>สวนองุ่นสิงห์บุรี</h1>
         <h2>สวนองุ่นพรหมบุรี</h2>
         <h3>สวนองุ่นพร้อมไวน์</h3>
-        <p>บ้านสวนปากบาง พรหมบุรี สิงห์บุรี องุ่นสด ไวน์คุณภาพ</p>
+        <p>บ้านสวนปากบาง พรหมบุรี สิงห์บุรี องุ่นสด ไวน์คุณภาพ คาเฟ่ด้านหน้าสวน</p>
       </div>
 
       <Navbar />
@@ -32,6 +34,8 @@ export default function App() {
         <GrapeVarieties />
         <WineProducts />
         <Gallery />
+        <CafeGallery />
+        <VideoReview />
         <Contact />
       </main>
 

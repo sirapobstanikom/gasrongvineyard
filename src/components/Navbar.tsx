@@ -10,6 +10,8 @@ const navLinks = [
   { name: 'สายพันธุ์องุ่น', href: '#varieties' },
   { name: 'ผลิตภัณฑ์ไวน์', href: '#wine' },
   { name: 'แกลเลอรี', href: '#gallery' },
+  { name: 'แกลเลอรีคาเฟ่', href: '#cafe-gallery' },
+  { name: 'วิดีโอรีวิว', href: '#video-review' },
   { name: 'ติดต่อเรา', href: '#contact' },
 ];
 
@@ -25,15 +27,21 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (isOpen) document.body.style.overflow = 'hidden';
+    else document.body.style.overflow = '';
+    return () => { document.body.style.overflow = ''; };
+  }, [isOpen]);
+
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
-        scrolled ? 'glass-nav py-3' : 'bg-transparent py-8'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 pt-[env(safe-area-inset-top)] ${
+        scrolled ? 'glass-nav py-2 sm:py-3' : 'bg-transparent py-4 sm:py-8'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-        <a href="#home" className="flex items-center gap-4 group">
-          <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:shadow-[0_0_20px_rgba(197,160,89,0.3)]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center">
+        <a href="#home" className="flex items-center gap-2 sm:gap-4 group">
+          <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:shadow-[0_0_20px_rgba(197,160,89,0.3)] shrink-0">
             <img 
               src={logo} 
               alt="แกสกะรอง สวนองุ่น" 
@@ -41,10 +49,10 @@ export default function Navbar() {
             />
           </div>
           <div className="flex flex-col">
-            <span className={`text-lg md:text-xl font-serif tracking-widest transition-colors ${scrolled ? 'text-ink-dark' : 'text-white'}`}>
+            <span className={`text-base sm:text-lg md:text-xl font-serif tracking-widest transition-colors ${scrolled ? 'text-ink-dark' : 'text-white'}`}>
               GAS & RONG
             </span>
-            <span className={`text-[8px] uppercase tracking-[0.4em] font-bold transition-colors ${scrolled ? 'text-gold-accent' : 'text-gold-accent/80'}`}>
+            <span className={`text-[7px] sm:text-[8px] uppercase tracking-[0.3em] sm:tracking-[0.4em] font-bold transition-colors ${scrolled ? 'text-gold-accent' : 'text-gold-accent/80'}`}>
               Vineyard Estate
             </span>
           </div>
@@ -84,7 +92,7 @@ export default function Navbar() {
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden bg-paper-light border-t border-gold-accent/10 overflow-hidden"
           >
-            <div className="flex flex-col p-6 gap-4">
+            <div className="flex flex-col p-4 pb-[max(1rem,env(safe-area-inset-bottom))] gap-3 max-h-[calc(100dvh-4rem)] overflow-y-auto">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
