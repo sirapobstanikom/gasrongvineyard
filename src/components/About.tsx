@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 
-const aboutImage = new URL('../assets/รีวิว.jpg', import.meta.url).href;
+const aboutImage = '/assets/รีวิว.jpg';
 
 export default function About() {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const logo = new URL('../assets/1.jpg', import.meta.url).href;
+const logo = '/assets/1.jpg';
 
 export default function Footer() {
   return (

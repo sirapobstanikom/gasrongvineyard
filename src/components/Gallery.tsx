@@ -1,21 +1,19 @@
 import React from 'react';
 import { motion } from 'motion/react';
 
-// ภาพจากโปรเจกต์ (โหลดจาก src/assets) — ตอนนี้ใช้ 1.jpg ครบ 6 ช่อง
-// ถ้ามีรูปใน assets/gallery/ (1.jpg, 2.jpg, ...) แล้ว เปลี่ยนเป็น: [1,2,3,4,5,6].map(i => getImage(`../assets/gallery/${i}.jpg`))
-const getImage = (path: string) => new URL(path, import.meta.url).href;
-const one = getImage('../assets/rev.jpg');
-const two = getImage('../assets/2.jpg');
-const three = getImage('../assets/3.jpg');
-const four = getImage('../assets/4.jpg');
-const five = getImage('../assets/5.jpg');
-const six = getImage('../assets/6.jpg');
-const seven = getImage('../assets/grape.jpg');
-const eight = getImage('../assets/องุ่นเขียว.jpg');
-const nine = getImage('../assets/องุ่นเขียว2.jpg');
-const ten = getImage('../assets/องุ่นแดง2.jpg');
-
-const images = [one, two, three, four, five, six, seven, eight, nine, ten];
+// รูปจาก public/assets/ — ใส่ไฟล์ในโฟลเดอร์ public/assets/ แล้ว commit
+const images = [
+  '/assets/rev.jpg',
+  '/assets/2.jpg',
+  '/assets/3.jpg',
+  '/assets/4.jpg',
+  '/assets/5.jpg',
+  '/assets/6.jpg',
+  '/assets/grape.jpg',
+  '/assets/องุ่นเขียว.jpg',
+  '/assets/องุ่นเขียว2.jpg',
+  '/assets/องุ่นแดง2.jpg',
+];
 
 export default function Gallery() {
   return (

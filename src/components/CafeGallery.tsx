@@ -1,16 +1,16 @@
 import React from 'react';
 import { motion } from 'motion/react';
 
-// ภาพแกลเลอรีคาเฟ่ — ใส่รูปใน assets/cafe-gallery/ (1.jpg, 2.jpg, ...) ได้
-const getImage = (path: string) => new URL(path, import.meta.url).href;
-const p1 = getImage('../assets/เค้ก.jpg');
-const p2 = getImage('../assets/pizza.jpg');
-const p3 = getImage('../assets/มินเนี่ยน.jpg');
-const p4 = getImage('../assets/coffee.jpg');
-const p5 = getImage('../assets/ไอติมเค้ก.jpg');
-const p6 = getImage('../assets/fruitfeppe.jpg');
-const p7 = getImage('../assets/รีวิว.jpg');
-const cafeImages = [p1, p2, p3, p4, p5, p6, p7];
+// รูปจาก public/assets/ — ใส่ไฟล์ในโฟลเดอร์ public/assets/ แล้ว commit
+const cafeImages = [
+  '/assets/เค้ก.jpg',
+  '/assets/pizza.jpg',
+  '/assets/มินเนี่ยน.jpg',
+  '/assets/coffee.jpg',
+  '/assets/ไอติมเค้ก.jpg',
+  '/assets/fruitfeppe.jpg',
+  '/assets/รีวิว.jpg',
+];
 
 export default function CafeGallery() {
   return (

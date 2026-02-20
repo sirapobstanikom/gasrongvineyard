@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'motion/react';
 
-const imageViking = new URL('../assets/ไวกิ้ง.jpg', import.meta.url).href;
-const imageshineMuscat = new URL('../assets/shinemus.jpg', import.meta.url).href;
+const imageViking = '/assets/ไวกิ้ง.jpg';
+const imageshineMuscat = '/assets/shinemus.jpg';
 const varieties = [
   {
     name: 'rembo',

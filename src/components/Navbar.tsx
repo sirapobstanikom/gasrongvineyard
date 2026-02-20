@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X } from 'lucide-react';
 
-const logo = new URL('../assets/1.jpg', import.meta.url).href;
+const logo = '/assets/1.jpg';
 
 const navLinks = [
   { name: 'หน้าแรก', href: '#home' },
